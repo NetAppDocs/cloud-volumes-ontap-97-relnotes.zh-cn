@@ -1,0 +1,205 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-aws.html 
+keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks 
+summary: AWS 支持多种 Cloud Volumes ONTAP 配置。 
+---
+= AWS 中支持的配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+AWS 支持多种 Cloud Volumes ONTAP 配置。
+
+
+
+== 按许可证支持的配置
+
+Cloud Volumes ONTAP 可作为单节点系统和高可用性（ HA ）节点对在 AWS 中使用，以实现容错和无中断运行。
+
+不支持将单节点系统升级到 HA 对。如果要在单节点系统和 HA 对之间切换，则需要部署新系统并将现有系统中的数据复制到新系统。
+
+[cols="h,d,d,d,d,d,d"]
+|===
+|  | 免费 | PAYGO 探索 | PAYGO 标准 | PAYGO 高级版 | 基于节点的许可证 | 基于容量的许可证 
+
+
+| 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 TiB | 10 TiB | 368 TiB ^1^ | 每个许可证 368 TiB ^1^ | 2 个 PIB ^1^ 
+
+
+| 支持的 EC2 实例类型 ^2^  a| 
+* c4.4xlarge
+* c4.8xlarge
+* c5.9xlarge
+* c5.18 x 大型
+* c5d.4xlarge ^3^
+* c5d.9x 大型 ^3^
+* c5d.18x 大型 ^3^
+* c5n.9x 大型 ^4^
+* c5n.18x 大型 ^4^
+* m4.xlarge
+* m4.2 倍大
+* m4.4xlarge
+* m5.xlarge
+* m5.2xlarge
+* m5.4xlarge
+* m5.16 x 大型
+* m5d.8xlarge ^3^
+* m5d.12 x 大型 ^3^
+* r4.xlarge
+* r4.2 个大型
+* r5.xlarge
+* r5.2 个大型
+* r5.8xlarge
+* r5.12 x 大型 ^5^
+* r5d.2xlarge ^3^
+
+ a| 
+* m4.xlarge
+* m5.xlarge
+
+ a| 
+* m4.2 倍大
+* m5.2xlarge
+* r4.xlarge
+* r5.xlarge
+
+ a| 
+* c4.4xlarge
+* c4.8xlarge
+* c5.9xlarge
+* c5.18 x 大型
+* c5d.4xlarge ^3^
+* c5d.9x 大型 ^3^
+* c5d.18x 大型 ^3^
+* c5n.9x 大型 ^4^
+* c5n.18x 大型 ^4^
+* m4.4xlarge
+* m5.4xlarge
+* m5.16 x 大型
+* m5d.8xlarge ^3^
+* m5d.12 x 大型 ^3^
+* r4.2 个大型
+* r5.2 个大型
+* r5.8xlarge
+* r5.12 x 大型 ^5^
+* r5d.2xlarge ^3^
+
+ a| 
+* c4.4xlarge
+* c4.8xlarge
+* c5.9xlarge
+* c5.18 x 大型
+* c5d.4xlarge ^3^
+* c5d.9x 大型 ^3^
+* c5d.18x 大型 ^3^
+* c5n.9x 大型 ^4^
+* c5n.18x 大型 ^4^
+* m4.xlarge
+* m4.2 倍大
+* m4.4xlarge
+* m5.xlarge
+* m5.2xlarge
+* m5.4xlarge
+* m5.16 x 大型
+* m5d.8xlarge ^3^
+* m5d.12 x 大型 ^3^
+* r4.xlarge
+* r4.2 个大型
+* r5.xlarge
+* r5.2 个大型
+* r5.8xlarge
+* r5.12 x 大型 ^5^
+* r5d.2xlarge ^3^
+
+ a| 
+* c4.4xlarge
+* c4.8xlarge
+* c5.9xlarge
+* c5.18 x 大型
+* c5d.4xlarge ^3^
+* c5d.9x 大型 ^3^
+* c5d.18x 大型 ^3^
+* c5n.9x 大型 ^4^
+* c5n.18x 大型 ^4^
+* m4.xlarge
+* m4.2 倍大
+* m4.4xlarge
+* m5.xlarge
+* m5.2xlarge
+* m5.4xlarge
+* m5.16 x 大型
+* m5d.8xlarge ^3^
+* m5d.12 x 大型 ^3^
+* r4.xlarge
+* r4.2 个大型
+* r5.xlarge
+* r5.2 个大型
+* r5.8xlarge
+* r5.12 x 大型 ^5^
+* r5d.2xlarge ^3^
+
+
+
+
+| 支持的磁盘类型 ^6^ 6+| 通用 SSD （ GP3 和 GP2 ），配置的 IOPS SSD （ IO1 ）和吞吐量优化型 HDD （ st1 ） ^7^ 
+|===
+注释：
+
+. 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参见 link:reference-limits-aws.html["存储限制"]。
+. 选择 EC2 实例类型时，您可以指定它是共享实例还是专用实例。
+. 这些实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["了解更多信息。"^]。
+. 从 9.7 p5 开始，支持 c5n.9xlarge 和 c5n.18xlarge 。
+. r5.12 个大型实例类型具有已知的可支持性限制。如果节点因崩溃而意外重新启动，则系统可能无法收集用于对问题进行故障排除的核心文件，并对问题进行根发生原因处理。客户接受风险和有限支持条款，如果发生这种情况，则承担所有支持责任。
+. 在将 SSD 与 Cloud Volumes ONTAP 标准版，高级版和 BYOL 结合使用时，会启用增强的写入性能。
+. 使用吞吐量优化型 HDD （ st1 ）时，不建议将数据分层到对象存储。
+. 有关 AWS 区域支持，请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
+. Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持使用其他 VM 实例类型的解决方案。
+
+
+
+
+== 支持的磁盘大小
+
+在 AWS 中，一个聚合最多可以包含 6 个类型和大小相同的磁盘。
+
+[cols="3*"]
+|===
+| 通用 SSD （ GP3 和 GP2 ） | 已配置 IOPS SSD （ IO1 ） | 吞吐量优化型 HDD （ st1 ） 
+
+
+ a| 
+* 100 GiB
+* 500 GiB
+* 1 TiB
+* 2 TiB
+* 4 TiB
+* 6 TiB
+* 8 TiB
+* 16 TiB
+
+ a| 
+* 100 GiB
+* 500 GiB
+* 1 TiB
+* 2 TiB
+* 4 TiB
+* 6 TiB
+* 8 TiB
+* 16 TiB
+
+ a| 
+* 500 GiB
+* 1 TiB
+* 2 TiB
+* 4 TiB
+* 6 TiB
+* 8 TiB
+* 16 TiB
+
+
+|===

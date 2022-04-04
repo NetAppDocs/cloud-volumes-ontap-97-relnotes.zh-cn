@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: reference-issues.html 
+keywords: issues, bugs, known issues 
+summary: 已知问题可确定可能妨碍您成功使用此版本产品的问题。 
+---
+= 已知问题
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+已知问题可确定可能妨碍您成功使用此版本产品的问题。
+
+您可以在中找到 ONTAP 软件的已知问题 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^]。
+
+
+
+== 对于具有多个 SVM 的 HA 对，节点暂停可能会失败
+
+如果您计划暂停或重新启动包含多个 Storage VM （ SVM ）的 HA 对中的 Cloud Volumes ONTAP 节点，建议您在关闭此节点之前将所有逻辑接口（ LIF ）预迁移到配对节点。
+
+以下示例将从当前（本地）节点迁移所有数据 LIF ：
+
+`node1 ：：： > network interface migrate-all -node local`
+
+此操作可加快向配对节点的网络过渡，并避免因停止节点而偶尔出现已知问题。
+
+如果由于迁移 LIF 所需时间过长而无法停止节点，则重试 reboot 或 halt 命令应使其停止。

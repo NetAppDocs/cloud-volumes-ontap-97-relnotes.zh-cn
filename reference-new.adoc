@@ -1,0 +1,258 @@
+---
+sidebar: sidebar 
+permalink: reference-new.html 
+keywords: 'what"s new, new, features, release notes, enhancements' 
+summary: Cloud Volumes ONTAP 9.7 包括多项新功能和增强功能。 
+---
+= Cloud Volumes ONTAP 9.7 中的新增功能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP 9.7 包括多项新功能和增强功能。
+
+最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Cloud Manager 发行说明"^] 了解详细信息。
+
+
+
+== 9.7 P6 （ 2020 年 8 月 15 日）
+
+适用于 Cloud Volumes ONTAP 的 9.7 P6 修补程序版本现在可通过 Cloud Manager 3.8 及更高版本获得。Cloud Manager 将提示您将现有系统升级到此修补程序版本。 https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P6["查看 P6 修补程序中已修复的错误列表"^] （需要登录 NetApp 支持站点）。
+
+
+
+== 提供多个 BYOL 许可证以增加容量（ 2020 年 8 月 3 日）
+
+现在，您可以为 Cloud Volumes ONTAP BYOL 系统购买多个许可证，以分配超过 368 TiB 的容量。例如，您可以购买两个许可证，以便为 Cloud Volumes ONTAP 分配高达 736 TiB 的容量。或者，您也可以购买四个许可证，以获得高达 1.4 PiB 的容量。
+
+您可以为单节点系统或 HA 对购买的许可证数量不受限制。
+
+请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参阅本发行说明中的存储限制。
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["了解如何向 Cloud Volumes ONTAP 添加其他系统许可证"^]。
+
+
+
+== 9.7 P5 （ AWS ）（ 2020 年 7 月 27 日）
+
+Cloud Volumes ONTAP 9.7 P5 现已在 AWS 中推出。此修补程序版本包含错误修复，并支持新的 EC2 实例类型。
+
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P5["查看 P5 修补程序中已修复的错误列表"^] （需要登录 NetApp 支持站点）。
+
+
+
+=== 支持新的 EC2 实例类型
+
+Cloud Volumes ONTAP 现在支持使用高级版和 BYOL 许可证的以下 EC2 实例类型：
+
+* c5n.9x 大型
+* c5n.18x 大型
+
+
+
+
+== 9.7 P5 in Azure （ 2020 年 7 月 20 日）
+
+Cloud Volumes ONTAP 9.7 P5 现已在 Microsoft Azure 中推出。此修补程序版本包含错误修复以及对新 VM 类型的支持。
+
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P5["查看 P5 修补程序中已修复的错误列表"^] （需要登录 NetApp 支持站点）。
+
+
+
+=== 支持使用超 SSD VNVRAM 的新 VM 类型
+
+现在， Cloud Volumes ONTAP 支持以下 VM 类型，并支持具有高级版或 BYOL 许可证的单节点系统：
+
+* 标准 E32S_v3
+* Standard E48s_v3
+
+
+E32S_v3 VM 类型使用 https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["超 SSD"^] 用于 VNVRAM ，可提供更好的写入性能。
+
+目前，以下地区支持这些 VM 类型： US Gov Virginia ，美国中南部和美国西部。
+
+
+
+== 在 AWS 中支持多个 Storage VM （ 2020 年 7 月 16 日）
+
+Cloud Volumes ONTAP 9.7 现在支持 AWS 中的多个 Storage VM （ SVM ）。
+
+如果您自带许可证（ BYOL ），则 c5 ， m5 和 R5 实例类型支持多个 Storage VM 。支持以下数量的 Storage VM ：
+
+* 12 个 Storage VM ，具有单节点系统
+* 8 个具有 HA 对的 Storage VM
+
+
+除了默认配置了 Cloud Volumes ONTAP 的第一个 Storage VM 之外，每个额外的 _data-fering-storage VM 都需要附加许可证。请联系您的客户团队以获取 SVM 附加许可证。
+
+您为灾难恢复（ DR ）配置的 Storage VM 不需要附加许可证（它们是免费的），但它们会计入 Storage VM 限制。
+
+例如，如果一个 HA 对上有 8 个提供数据的 Storage VM ，则表示已达到限制，无法再创建任何其他 Storage VM 。另一个 HA 对也是如此，该 HA 对配置了 8 个存储 VM 用于灾难恢复—您已达到限制，无法再创建任何 Storage VM 。
+
+必须通过 System Manager 或 CLI 创建其他 Storage VM 。
+
+
+
+== 不再支持 Azure 中的德国主权区域（ 2020 年 6 月 26 日）
+
+以下 Azure 地区不再支持 Cloud Volumes ONTAP ：
+
+* 德国中部（ Sover自主 ）
+* 德国东北部（ SoverN ）
+
+
+NetApp 继续在公有德国地区支持 Cloud Volumes ONTAP ：
+
+* 德国北部（公有）
+* 德国中南部（公有）
+
+
+https://cloud.netapp.com/cloud-volumes-global-regions["查看受支持 Azure 区域的完整列表"^]。
+
+
+
+== 9.7 P4 （ 2020 年 6 月 2 日）
+
+适用于 Cloud Volumes ONTAP 的 9.7 P4 修补程序版本现在可通过 Cloud Manager 3.8 及更高版本获得。Cloud Manager 将提示您将现有系统升级到此修补程序版本。 https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P4["查看 P4 修补程序中已修复的错误列表"^] （需要登录 NetApp 支持站点）。
+
+
+
+== 9.7 P3 （ 2020 年 5 月 2 日）
+
+适用于 Cloud Volumes ONTAP 的 9.7 P3 修补版本现在可通过 Cloud Manager 3.8 及更高版本获得。Cloud Manager 将提示您将现有系统升级到此修补程序版本。 https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P3["查看 P3 修补程序中已修复的错误列表"^] （需要登录 NetApp 支持站点）。
+
+
+
+== 9.7 P2 （ 2020 年 4 月 8 日）
+
+适用于 Cloud Volumes ONTAP 的 9.7 P2 修补版本现在可通过 Cloud Manager 3.8 及更高版本获得。Cloud Manager 将提示您将现有系统升级到此修补程序版本。 https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P2["查看 P2 修补程序中已修复的错误列表"^] （需要登录 NetApp 支持站点）。
+
+
+
+== 增加 Google Cloud 中的磁盘容量（ 2020 年 3 月 13 日）
+
+现在，在 Google Cloud 中使用高级版或 BYOL 许可证时，您最多可以将 256 TiB 的永久性磁盘连接到 Cloud Volumes ONTAP 。此容量为 64 TB 。
+
+与以往一样，通过将永久性磁盘与对象存储的数据分层相结合，您可以达到 Premium 和 BYOL 的最大系统容量 368 TiB 。
+
+每个系统的最大数据磁盘数也增加到 124 个磁盘。
+
+* link:reference-configs-gcp.html["详细了解 Google Cloud 中支持的 Cloud Volumes ONTAP 配置"]
+* link:reference-limits-gcp.html["查看 Google Cloud 中的存储限制"]
+
+
+
+
+== 9.7 P1 （ 2020 年 3 月 6 日）
+
+适用于 Cloud Volumes ONTAP 的 9.7 P1 修补版本现在可通过 Cloud Manager 3.8 及更高版本获得。Cloud Manager 将提示您将现有系统升级到此修补程序版本。 https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P1["查看 P1 修补程序中已修复的错误列表"^] （需要登录 NetApp 支持站点）。
+
+
+
+== AWS 更新（ 2020 年 2 月 16 日）
+
+我们引入了对新 EC2 实例的支持，并更改了支持的数据磁盘数量。
+
+
+
+=== 支持新实例
+
+现在，在使用高级版或 BYOL 许可证时， Cloud Volumes ONTAP 9.7 支持多种新的 EC2 实例类型：
+
+* c5.9xlarge
+* c5d.18x 大型 ^1^
+* m5d.8xlarge ^1^
+* m5d.12 x 大型 ^1^
+* m5.16 x 大型
+* r5.8xlarge
+* r5.12 x 大型 ^2^
+
+
+^1^ 这些实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["了解更多信息。"^]。
+
+^2^ r5.12 x 大型实例类型具有已知的可支持性限制。如果节点因崩溃而意外重新启动，则系统可能无法收集用于对问题进行故障排除的核心文件，并对问题进行根发生原因处理。客户接受风险和有限支持条款，如果发生这种情况，则承担所有支持责任。
+
+https://aws.amazon.com/ec2/instance-types/["详细了解这些 EC2 实例类型"^]。
+
+link:reference-configs-aws.html["详细了解 AWS 中支持的 9.7 配置"]。
+
+
+
+=== 支持的数据磁盘
+
+现在，对于 c5 ， m5 和 R5 实例，支持的数据磁盘数量减少了一个。对于单节点系统，支持 22 个数据磁盘。对于 HA 对，每个节点支持 19 个数据磁盘。
+
+link:reference-limits-aws.html["详细了解 AWS 中的存储限制"]。
+
+
+
+== 支持 Azure 中的 DS15_v2 （ 2020 年 2 月 12 日）
+
+现在，无论是单节点系统还是 HA 对， Azure 中的 DS15_v2 虚拟机类型都支持 Cloud Volumes ONTAP 。
+
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-memory#dsv2-series-11-15["了解有关 DSv2 系列的更多信息"^]。
+
+link:reference-configs-azure.html["详细了解 Azure 中支持的 9.7 配置"]。
+
+
+
+== 9.7 GA （ 2020 年 2 月 10 日）
+
+Cloud Volumes ONTAP 9.7 的通用版本（ GA ）现在可在 AWS 和 Google Cloud 中使用。GA 版本包含错误修复。Cloud Manager 将提示您将现有系统升级到此版本。
+
+
+
+== 9.7 D1 for Azure （ 2020 年 1 月 29 日）
+
+Cloud Volumes ONTAP 9.7 D1 现在可在 Microsoft Azure 中使用。
+
+我们发现了使用 Cloud Volumes ONTAP 9.7 及更早版本的问题描述，在 Azure 虚拟机重新启动的情况下， Cloud Volumes ONTAP 可能无法成功启动。
+
+此问题描述在 9.7 D1 （及更高版本）中得到修复。我们强烈建议尽快升级到最新的 Cloud Volumes ONTAP 版本。
+
+如有任何疑问，请通过产品内聊天或联系我们 https://www.netapp.com/us/contact-us/support.aspx[]。
+
+
+
+== 9.7 RC1 （ 2019 年 12 月 16 日）
+
+Cloud Volumes ONTAP 9.7 RC1 现在可在 AWS ， Azure 和 Google 云平台中使用。除了提供的功能之外，还提供了 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9.7"^]，此版本的 Cloud Volumes ONTAP 包括以下内容：
+
+* <<Flash Cache support in Azure>>
+* <<Fix for Azure NIC detach events>>
+
+
+
+
+=== Azure 中的 Flash Cache 支持
+
+现在， Cloud Volumes ONTAP 支持在 Azure 中使用单节点 BYOL 系统的 Standard_L8s_v2 VM 类型。此 VM 类型包括本地 NVMe 存储， Cloud Volumes ONTAP 使用此存储作为 _Flash Cache_ 。
+
+Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。
+
+使用此 VM 类型部署新系统或修改现有系统以使用此 VM 类型，您将自动利用 Flash Cache 。
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["了解有关在 Cloud Volumes ONTAP 上启用 Flash Cache 的更多信息，包括数据压缩的限制"^]。
+
+
+
+=== 修复 Azure NIC 断开事件
+
+此版本解决了问题描述节点从 Azure NIC 断开事件重新启动的 Cloud Volumes ONTAP 问题。Cloud Volumes ONTAP 将更妥善地处理这些事件，而不会中断服务。Cloud Volumes ONTAP HA 对仍会从 Azure 冻结维护事件执行接管 / 交还序列，但在此期间可能无法从 NIC 断开执行后续重新启动。
+
+
+
+== 升级说明
+
+* Cloud Volumes ONTAP 升级必须从 Cloud Manager 完成。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
+* 您可以从 9.6 版升级到 Cloud Volumes ONTAP 9.7 。Cloud Manager 将提示您将现有 Cloud Volumes ONTAP 9.6 系统升级到 9.7 版。
++
+http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["了解在 Cloud Manager 通知您时如何升级"^]。
+
+* 升级单节点系统会使系统脱机长达 25 分钟，在此期间 I/O 会中断。
+* 升级 HA 对无中断， I/O 不会中断。在此无中断升级过程中，每个节点会同时进行升级，以继续为客户端提供 I/O 。
+
