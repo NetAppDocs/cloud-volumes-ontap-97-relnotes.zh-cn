@@ -30,7 +30,6 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 中国地区支持 Cloud Volumes ONTAP ，如下所示。
 
 * AWS 中国地区支持 Cloud Volumes ONTAP 9.6 。
-* 中国 Azure 地区支持 Cloud Volumes ONTAP 9.9 。
 * 支持单节点系统。
 * 支持直接从 NetApp 购买的许可证。
 
