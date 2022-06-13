@@ -43,9 +43,7 @@
   <block id="7751129b8546a0da65fb379b1cc9c243" category="cell">每个许可证 368 TiB</block>
   <block id="376c581ebe9ec9aa8853377f8538ebbd" category="cell">基于容量的许可证</block>
   <block id="9010e525ec80d0fdea3d56191f64ce39" category="cell">2 个 PIB</block>
-  <block id="2f9882645b2c32820ad085240bacb763" category="section-title">对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？</block>
   <block id="44007958b04e5e15a25a3ca1ee98abeb" category="paragraph">容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。</block>
-  <block id="fc9a388cd18c69244f22554de6f0d544" category="section-title">对于 AWS 中的 HA 系统，镜像数据是否计入容量限制？</block>
   <block id="8644b747d80d3144a35c2f7a3eb37c2e" category="paragraph">不可以。AWS HA 对中的数据会在节点之间同步镜像，以便在发生故障时可以使用这些数据。例如，如果您在节点 A 上购买了 8 TiB 磁盘，则 Cloud Manager 还会在节点 B 上分配一个 8 TiB 磁盘，用于镜像数据。虽然配置了 16 TiB 的容量，但许可证限制仅会计入 8 TiB 的容量。</block>
   <block id="c029ebf0cab0f40812ebec7c644fef41" category="section-title">EC2 实例的磁盘和分层限制</block>
   <block id="64902ebf86d86e0c5dfcc29138584b73" category="paragraph">Cloud Volumes ONTAP 使用 EBS 卷作为磁盘，最大磁盘大小为 16 TiB 。以下各节按 EC2 实例类型显示了磁盘和分层限制，因为许多 EC2 实例类型具有不同的磁盘限制。单节点系统和 HA 对之间的磁盘限制也不同。</block>
@@ -606,7 +604,6 @@
   <block id="19fbf141e1ca3109ba425e8573c0abd5" category="paragraph">如果由于迁移 LIF 所需时间过长而无法停止节点，则重试 reboot 或 halt 命令应使其停止。</block>
   <block id="157a4538d8adbcfa830439923f7be5bf" category="summary">本发行说明介绍了 Cloud Volumes ONTAP 9.7 的新增功能，限制和已知问题。</block>
   <block id="b440c9b0c3ae0c42d32403ccefbe0375" category="doc">《 Cloud Volumes ONTAP 9.7 发行说明》</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
   <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">发行说明主页</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
@@ -651,4 +648,6 @@
   <block id="fed5c8246ca485a22abc959eb3025a8c" category="admonition">免费试用开始、剩余7天以及剩余1天时、您将在Cloud Manager中收到通知。例如：<block ref="4c1747a7ecb096dffecedae45404dae8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="451e7fc5df78c19113abdb3f6a0dc54e" category="paragraph">了解如何开始使用基于容量的许可：</block>
   <block id="fdb736034a6801c8a5010a511211a4a7" category="paragraph">了解如何开始使用Keystone Flex订阅：</block>
+  <block id="5505ffcb759fb1c9c3793b2dd386cd82" category="inline-link">了解如何在PAYGO和BYOL之间切换</block>
+  <block id="e1e947c069bd154f04aefec0a6619873" category="paragraph">请注意、不支持将系统从PAYGO by node许可转换为BYOL by-node许可(反之亦然)。您需要部署一个新系统、然后将数据复制到该系统。<block ref="c9d55d60961394f2cbacfb1050626915" category="inline-link-rx"></block></block>
 </blocks>
