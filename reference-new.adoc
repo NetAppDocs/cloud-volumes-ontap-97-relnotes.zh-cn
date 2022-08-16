@@ -223,8 +223,8 @@ Cloud Volumes ONTAP 9.7 D1 现在可在 Microsoft Azure 中使用。
 
 Cloud Volumes ONTAP 9.7 RC1 现在可在 AWS ， Azure 和 Google 云平台中使用。除了提供的功能之外，还提供了 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9.7"^]，此版本的 Cloud Volumes ONTAP 包括以下内容：
 
-* <<Flash Cache support in Azure>>
-* <<Fix for Azure NIC detach events>>
+*  Cache support in Azure
+*  for Azure NIC detach events
 
 
 
