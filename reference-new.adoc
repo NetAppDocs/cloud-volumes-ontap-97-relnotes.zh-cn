@@ -16,7 +16,7 @@ summary: Cloud Volumes ONTAP 9.7 包括多项新功能和增强功能。
 [role="lead"]
 Cloud Volumes ONTAP 9.7 包括多项新功能和增强功能。
 
-最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Cloud Manager 发行说明"^] 了解详细信息。
+最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Manager 发行说明"^] 了解详细信息。
 
 
 
@@ -32,9 +32,9 @@ Cloud Volumes ONTAP 9.7 包括多项新功能和增强功能。
 
 您可以为单节点系统或 HA 对购买的许可证数量不受限制。
 
-请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参阅本发行说明中的存储限制。
+请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参阅本发行说明中的存储限制。
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["了解如何向 Cloud Volumes ONTAP 添加其他系统许可证"^]。
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["了解如何向 Cloud Volumes ONTAP 添加其他系统许可证"^]。
 
 
 
@@ -173,7 +173,7 @@ https://cloud.netapp.com/cloud-volumes-global-regions["查看受支持 Azure 区
 * r5.12 x 大型 ^2^
 
 
-^1^ 这些实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["了解更多信息。"^]。
+^1^ 这些实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["了解更多信息。"^]。
 
 ^2^ r5.12 x 大型实例类型具有已知的可支持性限制。如果节点因崩溃而意外重新启动，则系统可能无法收集用于对问题进行故障排除的核心文件，并对问题进行根发生原因处理。客户接受风险和有限支持条款，如果发生这种情况，则承担所有支持责任。
 
@@ -237,7 +237,7 @@ Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数
 
 使用此 VM 类型部署新系统或修改现有系统以使用此 VM 类型，您将自动利用 Flash Cache 。
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["了解有关在 Cloud Volumes ONTAP 上启用 Flash Cache 的更多信息，包括数据压缩的限制"^]。
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["了解有关在 Cloud Volumes ONTAP 上启用 Flash Cache 的更多信息，包括数据压缩的限制"^]。
 
 
 
@@ -252,7 +252,7 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-ca
 * Cloud Volumes ONTAP 升级必须从 Cloud Manager 完成。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
 * 您可以从 9.6 版升级到 Cloud Volumes ONTAP 9.7 。Cloud Manager 将提示您将现有 Cloud Volumes ONTAP 9.6 系统升级到 9.7 版。
 +
-http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["了解在 Cloud Manager 通知您时如何升级"^]。
+http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["了解在 Cloud Manager 通知您时如何升级"^]。
 
 * 升级单节点系统会使系统脱机长达 25 分钟，在此期间 I/O 会中断。
 * 升级 HA 对无中断， I/O 不会中断。在此无中断升级过程中，每个节点会同时进行升级，以继续为客户端提供 I/O 。

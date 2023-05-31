@@ -52,7 +52,7 @@ Cloud Volumes ONTAP 在 Google 云平台中作为单节点系统提供。
 |===
 注释：
 
-. 磁盘限制可以防止您单独使用磁盘来达到最大系统容量限制。您可以通过达到容量限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。
+. 磁盘限制可以防止您单独使用磁盘来达到最大系统容量限制。您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。
 +
 link:reference-limits-gcp.html["详细了解 Google Cloud 中的磁盘限制"]。
 
