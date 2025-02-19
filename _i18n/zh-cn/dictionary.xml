@@ -501,8 +501,6 @@
   <block id="4b6713b20325cd79e47d384880e9d318" category="paragraph">此操作可加快向配对节点的网络过渡，并避免因停止节点而偶尔出现已知问题。</block>
   <block id="19fbf141e1ca3109ba425e8573c0abd5" category="paragraph">如果由于迁移 LIF 所需时间过长而无法停止节点，则重试 reboot 或 halt 命令应使其停止。</block>
   <block id="157a4538d8adbcfa830439923f7be5bf" category="summary">本发行说明介绍了 Cloud Volumes ONTAP 9.7 的新增功能，限制和已知问题。</block>
-  <block id="b440c9b0c3ae0c42d32403ccefbe0375" category="doc">《 Cloud Volumes ONTAP 9.7 发行说明》</block>
-  <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">发行说明主页</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
   <block id="3a580f142203677f1f0bc30898f63f53" category="sidebar">Azure 酒店</block>
@@ -521,9 +519,6 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central 博客</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
-  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
-  <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP 云</block>
-  <block id="30af1a6878bac3a7aaed5d0e64e7b511" category="paragraph">Cloud Volumes ONTAP 提供了不同的许可选项、可让您根据自己的需求选择消费模式。</block>
   <block id="37439fa615a442ec183c1c602f9755f1" category="paragraph">基于容量的许可以 _package_ 的形式提供。部署Cloud Volumes ONTAP 系统时、您可以根据业务需求从多个许可包中进行选择。</block>
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">详细了解这些许可选项</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
@@ -546,7 +541,6 @@
   <block id="cf8932e0b406d0080602ae2ba6050f34" category="paragraph"><block ref="a93831aad103880218b6184b641135d6" category="inline-link-rx"></block>。</block>
   <block id="9dc25dec6d124cf86502e589c40d61af" category="paragraph"><block ref="856eab59dd4487874302c47901a1ac92" category="inline-link-rx"></block>。</block>
   <block id="64440bb71539a777dc59cfbda8a3e5ee" category="list-text">此 VM 类型包括本地 NVMe 存储， Cloud Volumes ONTAP 使用此存储作为 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>。</block>
-  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文档</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -562,4 +556,11 @@
 一个提供数据的SVM覆盖整个Cloud Volumes ONTAP系统。</block>
   <block id="2dbd9a217bce4c7ba4ef467f57d6875c" category="list-text">您可以为Cloud Volumes ONTAP BYOL单节点或HA对系统购买多个基于节点的许可证、以分配368 TiB以上的容量、最高可达到测试和支持的最大系统容量限制2 PIB。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block>。尽管Cloud Volumes ONTAP支持的最大测试和支持系统容量为2 PIB、但超过2 PIB限制将导致系统配置不受支持。</block>
   <block id="de9d6749570efc87e63811b5947fc250" category="list-text">从Cloud Volumes ONTAP 9.12.1开始、AWS机密云和Top机密云区域支持购买多个基于节点的许可证。</block>
+  <block id="6b32e99bddf60938239aabe092cb4c16" category="paragraph">Cloud Volumes ONTAP 提供了多种许可选项。每个选项都允许您选择一种满足您需求的消费模式。</block>
+  <block id="27fe4eb3edbaff8f250e2d51f7462681" category="inline-link">软件包</block>
+  <block id="13dba612a4f942a80cbc82c5f678d57c" category="inline-link">有关基于容量的许可证的更多信息</block>
+  <block id="d994821c78c4538d3406d1baa52bc470" category="paragraph"><block ref="55cb08b70ffaa99b7ec18860c0180e14" category="inline-link-rx"></block> <block ref="7c9574dfed81dad53ed1c2acf3a874b5" category="inline-link-rx"></block></block>
+  <block id="c3647f40e3574e0e6f49e20c19135bfa" category="section-title">使用Azure VM扩展的限制</block>
+  <block id="9d167ed7d52d81da8d83590ec3b5a4af" category="paragraph">Cloud Volumes ONTAP不支持在部署中使用Azure虚拟机(VM)扩展和VM应用程序。在Azure中将Cloud Volumes ONTAP与VM扩展结合使用会导致操作延迟、NetApp建议避免这些延迟。</block>
+  <block id="397c7d6cf1f12b7b8d421a9c73013b76" category="sidebar">Cloud Volumes ONTAP 9.7发行说明</block>
 </blocks>
