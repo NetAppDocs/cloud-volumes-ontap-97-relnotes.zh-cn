@@ -227,7 +227,6 @@
   <block id="0c4c4e63836f218793463e3bcdaddf27" category="list-text">在将 SSD 与 Cloud Volumes ONTAP 标准版，高级版和 BYOL 结合使用时，会启用增强的写入性能。</block>
   <block id="907c78338365697be8fd8d4a130503c8" category="list-text">使用吞吐量优化型 HDD （ st1 ）时，不建议将数据分层到对象存储。</block>
   <block id="a3f8304ab1695053d71855c60f8abf63" category="inline-link">Cloud Volumes 全球地区</block>
-  <block id="4375839c669e051e5f2a8de11ba0c5d0" category="list-text">有关 AWS 区域支持，请参见<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="e7089e61c962cfdae0de5b1d0748b6f2" category="list-text">Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持使用其他 VM 实例类型的解决方案。</block>
   <block id="36e4aa065725aff22926f2fed53bc3c7" category="section-title">支持的磁盘大小</block>
   <block id="f1ef8a69abb63b240d611c09ea5ddde6" category="paragraph">在 AWS 中，一个聚合最多可以包含 6 个类型和大小相同的磁盘。</block>
@@ -275,7 +274,6 @@
   <block id="11509498a3f1573cdde878f927dc10bd" category="inline-link">超 SSD</block>
   <block id="0a1f6a0fa33e6a786e0c1f71a0ea33a9" category="list-text">此 VM 类型使用<block ref="d656d82278337f3ecf8db6b2a30a45f2" category="inline-link-rx"></block> 用于 VNVRAM ，可提供更好的写入性能。</block>
   <block id="a63be6f12cd03be8e118239f1f944bda" category="list-text">使用 SSD 时会启用增强的写入性能，但使用 DS3_v2 虚拟机类型时不会启用。</block>
-  <block id="7c7627c6477255acb2239bd1be90f346" category="list-text">有关 Azure 区域支持，请参见<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="b049fcbe8198301adc6bf87634a02845" category="section-title">HA 对</block>
   <block id="2eacfdd792ca3ab121472c95654b43ec" category="paragraph">在 Azure 中将 Cloud Volumes ONTAP 部署为 HA 对时，您可以从以下配置中进行选择。</block>
   <block id="3e7433721426ddc5bb6007a1f480b7e0" category="cell">支持的磁盘类型</block>
@@ -359,7 +357,6 @@
   <block id="ce8c95cf9de92e0d85852b999d00a17a" category="list-text">德国北部（公有）</block>
   <block id="cfdd4f6f66dabd2b425ab10b5c56c3da" category="list-text">德国中南部（公有）</block>
   <block id="4a977616fcd7ade62dbf55a1f8db1bd0" category="inline-link">查看受支持 Azure 区域的完整列表</block>
-  <block id="07a1c66013de0c57f2bd7d69d3354c41" category="paragraph"><block ref="0f846b36f06a975303e325a2ffb2c92b" category="inline-link-rx"></block>。</block>
   <block id="12f1dfb594b821e25e55ab014437acc4" category="section-title">9.7 P4 （ 2020 年 6 月 2 日）</block>
   <block id="cae74b75cb879fa6011c4bc1e9acafed" category="inline-link">查看 P4 修补程序中已修复的错误列表</block>
   <block id="cbbe5951f603eb168d6ea68a73b678bc" category="paragraph">适用于 Cloud Volumes ONTAP 的 9.7 P4 修补程序版本现在可通过 Cloud Manager 3.8 及更高版本获得。Cloud Manager 将提示您将现有系统升级到此修补程序版本。<block ref="37b180138fbfa25f28dd1e0aa35747d2" category="inline-link-rx"></block> （需要登录 NetApp 支持站点）。</block>
@@ -443,7 +440,6 @@
   <block id="46e869bc0f7a5fcdc09df010e1f48b25" category="list-text">新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。</block>
   <block id="0e3cb01898d99d0091e2a6f5a7572390" category="paragraph">如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。</block>
   <block id="5063d3259058d90bbca06465957626d7" category="list-text">使用 SSD 时会启用增强的写入性能。</block>
-  <block id="7093754c2bc2f151c7deef337385971a" category="list-text">有关 Google Cloud Platform 区域支持，请参见<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="d29bff99e1f1d5529824e9017672d630" category="paragraph">在 Google Cloud 中，一个聚合最多可以包含 6 个类型和大小相同的磁盘。支持以下磁盘大小：</block>
   <block id="dcfebc6fbca2c5316f55c914e6593d2d" category="list-text">100 GB</block>
   <block id="70f79b00cb7649d94d473895d6c540d2" category="list-text">1 TB</block>
@@ -525,7 +521,6 @@
   <block id="dbe94f36417009d827f76ccf107bd90c" category="section-title">不应使用自动应用程序资源管理解决方案</block>
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">对于 AWS 中的 HA 系统，镜像数据是否计入容量限制？</block>
-  <block id="1f129df010c594cb0d37bd30745a3820" category="paragraph"><block ref="1f129df010c594cb0d37bd30745a3820" category="inline-link-rx"></block></block>
   <block id="79d3c4941fdb49ae08cc30405f716cce" category="list-text">对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。有关磁盘限制的信息，请参见 <block ref="71ccaacc6f6c8feca068c7ff1a7b2eb5" category="inline-link-macro-rx"></block>。</block>
   <block id="d424e7f11ba3f8c54b78553f58815d63" category="list-text">这些实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>。</block>
   <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>。</block>
@@ -563,4 +558,9 @@
   <block id="c3647f40e3574e0e6f49e20c19135bfa" category="section-title">使用Azure VM扩展的限制</block>
   <block id="9d167ed7d52d81da8d83590ec3b5a4af" category="paragraph">Cloud Volumes ONTAP不支持在部署中使用Azure虚拟机(VM)扩展和VM应用程序。在Azure中将Cloud Volumes ONTAP与VM扩展结合使用会导致操作延迟、NetApp建议避免这些延迟。</block>
   <block id="397c7d6cf1f12b7b8d421a9c73013b76" category="sidebar">Cloud Volumes ONTAP 9.7发行说明</block>
+  <block id="0890aa708cef7529c2bd35cb7d2895df" category="list-text">有关AWS区域支持，请参见<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
+  <block id="f0de068c81c765820aca0fa8fe017396" category="list-text">有关Azure区域支持，请参见<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
+  <block id="ef9be83cb59b0572a3581a6724316e48" category="list-text">有关Google Cloud Platform区域支持，请参见<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
+  <block id="26f113c6240bf0450440356676516cf1" category="paragraph"><block ref="26f113c6240bf0450440356676516cf1" category="inline-link-rx"></block></block>
+  <block id="045622dfb07c6145c4ccaf9f2078e56b" category="paragraph"><block ref="782e925b243dc89a59a0bc67d50ce99b" category="inline-link-rx"></block>(英文)</block>
 </blocks>

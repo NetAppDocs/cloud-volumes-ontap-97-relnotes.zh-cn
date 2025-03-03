@@ -112,7 +112,7 @@ NetApp 继续在公有德国地区支持 Cloud Volumes ONTAP ：
 * 德国中南部（公有）
 
 
-https://cloud.netapp.com/cloud-volumes-global-regions["查看受支持 Azure 区域的完整列表"^]。
+https://bluexp.netapp.com/cloud-volumes-global-regions["查看受支持 Azure 区域的完整列表"^](英文)
 
 
 

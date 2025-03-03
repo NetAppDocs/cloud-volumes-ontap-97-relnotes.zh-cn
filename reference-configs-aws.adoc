@@ -158,7 +158,7 @@ Cloud Volumes ONTAP 可作为单节点系统和高可用性（ HA ）节点对�
 . r5.12 个大型实例类型具有已知的可支持性限制。如果节点因崩溃而意外重新启动，则系统可能无法收集用于对问题进行故障排除的核心文件，并对问题进行根发生原因处理。客户接受风险和有限支持条款，如果发生这种情况，则承担所有支持责任。
 . 在将 SSD 与 Cloud Volumes ONTAP 标准版，高级版和 BYOL 结合使用时，会启用增强的写入性能。
 . 使用吞吐量优化型 HDD （ st1 ）时，不建议将数据分层到对象存储。
-. 有关 AWS 区域支持，请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
+. 有关AWS区域支持，请参见 https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
 . Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持使用其他 VM 实例类型的解决方案。
 
 
